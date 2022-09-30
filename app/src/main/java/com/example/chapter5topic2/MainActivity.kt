@@ -109,10 +109,11 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 1 && resultCode == RESULT_OK) {
+            //munculin gambar hasil foto ke imgGambar
             val bitmap = data?.extras?.get("data") as Bitmap
             imgGambar.setImageBitmap(bitmap)
         } else {
-            // some error to be shown here
+            toast("Not Valid!")
         }
     }
 }
